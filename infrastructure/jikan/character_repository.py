@@ -27,5 +27,3 @@ class CharacterRepository:
 		response = session.get(url, params=payload)
 
 		print(response.text)
-
-
