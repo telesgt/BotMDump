@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 requests = "*"
 requests-ratelimiter = "*"
+pymongo = "*"
+pynacl = "*"
+jsonpickle = "*"
 
 [dev-packages]
 

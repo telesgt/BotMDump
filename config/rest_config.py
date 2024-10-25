@@ -7,5 +7,9 @@ class RestConfig:
 		raise TypeError("Constants are immutable")
 	
 	@staticmethod
-	def getJikanLimiter() -> LimiterSession:
+	def get_jikan_limiter() -> LimiterSession:
 		return LimiterSession(per_second=3, per_minute=60)
+	
+	@staticmethod
+	def get_headers():
+		headers = {'User-Agent': 'macaco.dump'}
