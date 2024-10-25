@@ -9,4 +9,5 @@ class Character:
 		self.name = None
 		self.name_kanji = None
 		self.nicknames = []
-		self.favorites = None
+		self.rarity = None
+		self.gender = None

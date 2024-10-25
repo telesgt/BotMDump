@@ -1,14 +1,13 @@
+import os
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 class MongoConfig:
 
-	URI = "mongodb://root:example@127.0.0.1"		
+	URI = os.environ['DB_URI']
 		
 	@staticmethod
-	def openConnection():
+	def get_connection():
 		cli = MongoClient(MongoConfig.URI, server_api=ServerApi('1'))
 		return cli
-	
-	def __setattr__(self, name, value):
-		raise TypeError("Constants are immutable")
