@@ -23,6 +23,28 @@ Com o pipenv instalado, podemos baixar as dependências do projeto.
 pipenv install
 ```
 
+### Configurando docker
+
+Via prompt, abrir a pasta docker e executar o comando
+
+```
+docker-compose up
+```
+OU
+```
+docker-compose up -d
+```
+
+A interface web estará disponível através da url localhost:8081
+
+### Variáveis de Ambiente
+
+Crie na raiz um arquivo .env com a seguinte propriedade
+
+```
+DB_URI="mongodb://root:example@127.0.0.1"
+```
+
 ### Executando o projeto
 
 O projeto é executado a partir do main.py, porém como estamos usando o pipenv, executamos ele da seguinte forma.
