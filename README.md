@@ -37,6 +37,13 @@ docker-compose up -d
 
 A interface web estará disponível através da url localhost:8081
 
+### Variáveis de Ambiente
+
+Crie na raiz um arquivo .env com a seguinte propriedade
+
+```
+DB_URI="mongodb://root:example@127.0.0.1"
+```
 
 ### Executando o projeto
 
