@@ -6,4 +6,4 @@ from character_dump.dump import CharacterDump
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
 characterDump = CharacterDump()
-characterDump.doDump(10000)
+characterDump.doDump(100)
