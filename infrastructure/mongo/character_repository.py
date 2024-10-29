@@ -25,7 +25,9 @@ class CharacterRepository:
 
 	def delete_all(self):
 		
-		try:			
+		try:
+
+			print('Limpando collection waifu')
 
 			db = self.client.GachaWaifu
 			collection = db.characters
