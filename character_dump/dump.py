@@ -72,7 +72,7 @@ class CharacterDump():
 		self.character_repository.delete_all()
 
 		limites_genero = self.get_limite_personagens_por_genero(total_personagens, proporcao_mulheres=0.5)
-		raridades = self.calcular_valores_raridade(total_personagens)
+		
 		if(apagar_midia):
 			self.media_repository.delete_all()
 
@@ -99,8 +99,7 @@ class CharacterDump():
 
 				contador_personagens.adiciona_ao_genero(genero_personagem)
 
-				mongo_character = self.create_mongo_character(anilist_character, raridade=self.get_raridade_personagem(raridades, contador_personagens.get_atual_total()))
-				mongo_character = self.create_mongo_character(anilist_character, raridade=self.get_raridade_personagem(limites_raridade, contador_personagens))
+				mongo_character = self.create_mongo_character(anilist_character, raridade=self.get_raridade_personagem(limites_raridade, contador_personagens.get_atual_total()))				
 				self.character_repository.insert_waifu(mongo_character)
 
 				if contador_personagens.get_atual_total() >= total_personagens:
