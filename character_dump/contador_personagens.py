@@ -14,16 +14,22 @@ class ContadorPersonagens():
 	def get_by_genero(self, genero):
 		return self.quantidades_genero.get(genero, self.quantidades_genero[ContadorPersonagens.OTHER_ID])
 	
+	# Busca o indice de personagem por genero
+	# caso seja tipo Other, irá somar com o genero de maior valor para garantir que o de menor valor receba mais personages
 	def get_by_genero_com_other(self, genero):
 
 		if genero in self.quantidades_genero.keys():
 			quantidade_genero = self.quantidades_genero.get(genero, 0)
 			return quantidade_genero + self.quantidades_genero[ContadorPersonagens.OTHER_ID]
 		else:
-			total = 0
-			for quantidades in self.quantidades_genero.values():
-				total += quantidades
-			return total
+			quantidade_a_considerar = 0
+
+			if self.quantidades_genero[ContadorPersonagens.MALE_ID] > self.quantidades_genero[ContadorPersonagens.FEMALE_ID]:
+				quantidade_a_considerar = self.quantidades_genero[ContadorPersonagens.MALE_ID]
+			else:
+				quantidade_a_considerar = self.quantidades_genero[ContadorPersonagens.FEMALE_ID]
+
+			return self.quantidades_genero[ContadorPersonagens.OTHER_ID] + quantidade_a_considerar
 
 	def get_atual_feminino(self) -> int:
 		return self.get_by_genero[ContadorPersonagens.FEMALE_ID] + self.get_by_genero[ContadorPersonagens.OTHER_ID]

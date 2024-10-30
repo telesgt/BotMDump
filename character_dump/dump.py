@@ -54,6 +54,9 @@ class CharacterDump():
 
 				indice_personagem = contador_personagens.get_by_genero_com_other(genero_personagem)
 
+				if(indice_personagem >= 248):
+					pass
+
 				raridade_personagem = limites_raridade.get_raridade_personagem(genero_personagem, indice_personagem)
 
 				mongo_character = self.create_mongo_character(anilist_character, raridade_personagem)				

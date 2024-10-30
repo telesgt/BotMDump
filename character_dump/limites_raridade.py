@@ -44,7 +44,7 @@ class LimitesRaridade():
 
 			obj.set_limite_genero(ContadorPersonagens.MALE_ID, raridade, limite_genero_masculino + indice_anterior_masculino)
 			obj.set_limite_genero(ContadorPersonagens.FEMALE_ID, raridade, limite_genero_feminino + indice_anterior_feminino)
-			obj.set_limite_genero(ContadorPersonagens.OTHER_ID, raridade, limite_total)
+			obj.set_limite_genero(ContadorPersonagens.OTHER_ID, raridade, limite_total + indice_anterior_feminino + indice_anterior_masculino)
 
 			indice_anterior_masculino = limite_genero_masculino
 			indice_anterior_feminino = limite_genero_feminino
