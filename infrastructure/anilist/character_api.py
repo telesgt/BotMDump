@@ -29,6 +29,16 @@ class CharacterApi:
 							large
 							medium
 						}
+						media {
+							nodes {
+								title {
+									english
+									native
+									romaji
+									userPreferred
+								}
+							}
+						}
 					}
 				}
 			}
