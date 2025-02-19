@@ -1,5 +1,3 @@
-# MacacoDump
-
 Um projeto para gerar os dumps de personagens a serem utilizados pelo Bot
 
 ## Como executar
