@@ -1,6 +1,6 @@
 # MacacoDump
 
-MacacoDump é o projeto para gerar os dumps de personagens a serem utilizados pelo MacacoBot
+Um projeto para gerar os dumps de personagens a serem utilizados pelo Bot
 
 ## Como executar
 
